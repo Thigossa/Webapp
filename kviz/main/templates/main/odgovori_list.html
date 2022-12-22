@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Odgovori</h2>
+    <ul>
+        {% for odgovori in object_list %}
+            <li>
+                Naziv: {{ odgovori.naziv }}<br>
+                Tekst: {{ odgovori.tekst }}<br>
+                Tocan odgovor: {{ odgovori.tocanOdg }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

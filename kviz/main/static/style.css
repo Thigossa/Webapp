@@ -1,0 +1,31 @@
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 50px;}
+h2 {
+    text-align: center;}
+li {
+    list-style-type: none;
+    float: left;
+    margin-top: 10px;
+    font-size: 22px;}
+li a {
+    padding: 30px;}
+.kviz, .osoba, .pitanja, .odgovori {
+    border-color: blue;
+    border-style: double;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.kviz, .osoba, .pitanja, .odgovori > li{
+    list-style-type: none;
+    float: left;
+    margin-top: 10px;
+    font-size: 22px;
+}
+.kviz, .osoba, .pitanja, .odgovori > h1{
+    color: blue;
+    text-align: center;
+    font-size: 50px;
+}

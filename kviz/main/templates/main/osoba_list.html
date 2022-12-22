@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Osoba</h2>
+    <ul>
+        {% for osoba in object_list %}
+            <li>
+                Ime: {{ osoba.ime }}<br>
+                Prezime: {{ osoba.prezime }}<br>
+                Prijavljen/a za kviz: {{ osoba.PrijavljenaZaKviz }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

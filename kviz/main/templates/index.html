@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <title>Kviz pocetna</title>
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <p>Vaše ime: {{ user.username }}</p>
+    {% else %}
+    <p>Niste prijavljeni.</p>
+    {% endif %}
+    <h1>Kviz pocetna</h1>
+    
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">Pocetna</a></li>
+            <li><a href="/kviz">Kviz</a></li>
+            <li><a href="/osoba">Osoba</a></li>
+            <li><a href="/pitanja">Pitanja</a></li>
+            <li><a href="/odgovori">Odgovori</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

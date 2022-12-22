@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Pitanja</h2>
+    <ul>
+        {% for pitanja in object_list %}
+            <li>
+                Naziv: {{ pitanja.naziv }}<br>
+                Kategorija: {{ pitanja.kategorija }}<br>
+                Tekst: {{ pitanja.tekst }}<br>
+                Ime kviza: {{ pitanja.imeKviza }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
