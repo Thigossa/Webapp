@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Osoba</h2>
+    <ul style="display: grid;">
+        {% for osoba in object_list %}
+            <li>
+            
+                Ime: {{ osoba.ime }}<br>
+                Prezime: {{ osoba.prezime }}<br>
+                Prijavljen/a za kviz: {{ osoba.PrijavljenaZaKviz }}
+                <br><br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

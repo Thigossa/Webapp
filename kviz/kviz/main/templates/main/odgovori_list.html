@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Odgovori</h2>
+    <ul style="display: grid;">
+        {% for odgovori in object_list %}
+            <li>
+                Naziv odgovora: {{ odgovori.naziv }}<br>
+                Tekst: {{ odgovori.text }}<br>
+                Tocan odgovor?: {{ odgovori.tocan_odg }}
+                <br><br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

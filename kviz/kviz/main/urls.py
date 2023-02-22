@@ -13,6 +13,7 @@ urlpatterns = [
     path('osoba/', OsobaList.as_view(),name='osoba'),
     path('odgovori/', OdgovoriList.as_view(),name='odgovori'),
     path('pitanja/', PitanjaList.as_view(), name='pitanja'),
-    path('kandidati/', views.KandidatListView.as_view(), name='kandidati'),
-    path('kandidati/<int:pk>/delete/', views.KandidatDeleteView.as_view(), name='kandidati_delete'),
+    path('kandidat/', KandidatListView.as_view(), name='kandidat'),
+    path('unos/', views.unos_request, name='unos'),
+    path('unoskandidat/', views.unoskandidat_request, name='unoskandidat'),
 ]
